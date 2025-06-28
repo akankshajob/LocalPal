@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - LocalPal</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="parent-container">
+        <div class="logo">
+            <img src="localpal.png" alt="LocalPal Logo">
+            <h1>LocalPal</h1>
+            <p>Helping You Feel at Home, Wherever You Are</p>
+        </div>
+    </div>
+    <div class="admin-dashboard-container">
+        <header>
+            <h2>Admin Dashboard</h2>
+            <button id="logout-btn" onclick="logout()">Logout</button>
+        </header>
+        <h1>Localpal-Admin</h1>
+        <hr>
+        <ul>
+            <li> <h3><a href="admin-feedback.html">Feedback</a></h3></li>
+            <li> <h3><a  href="useredet.html">User-Details</a></h3></li>
+        </ul>
+        <section class="feedback-section">
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Facility</th>
+                        <th>Feedback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example of customer feedback -->
+                    <tr>
+                        <td>JohnDoe</td>
+                        <td>johndoe@example.com</td>
+                        <td>Cafe Aroma</td>
+                        
+                        <td>Great ambiance and food!</td>
+                    </tr>
+                    <tr>
+                        <td>JaneDoe</td>
+                        <td>janedoe@example.com</td>
+                        <td>Saptagiri Restaurant</td>
+                        <td>Good food, but service was slow.</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script>
+        // Logout functionality
+        function logout() {
+            window.location.href = "admin-login.html"; // Redirect to login page
+        }
+    </script>
+</body>
+</html>

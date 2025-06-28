@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - LocalPal</title>
+    <script src="explore.js"></script>
+    <link rel="stylesheet" href="stylesss.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="explore-header">
+        <h1>Explore Local Gems</h1>
+        <p ><b>Discover and experience the best your city has to offer!</b></p>
+    </header>
+
+    <!-- Search and Filters Section -->
+    <section class="filter-section">
+        <div class="container">
+            <input type="text" id="search-bar" placeholder="Search by name or keyword..." oninput="filterFacilities()">
+            <select id="category-filter" onchange="filterFacilities()">
+                <option value="all">All Categories</option>
+                <option value="cafes">Cafes & Restaurants</option>
+                <option value="accommodations">Accommodations</option>
+                <option value="medical">Medical Services</option>
+                <option value="attractions">Local Attractions</option>
+            </select>
+            <select id="rating-filter" onchange="filterFacilities()">
+                <option value="all">All Ratings</option>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+            </select>
+        </div>
+        
+    </section>
+
+    <!-- Facilities Grid -->
+    <section class="facilities-grid">
+        
+            <!-- Example Facility Cards -->
+            <div class="facility-card" data-category="cafes" data-rating="3">
+                <img src="Cafe aroma.jpg" alt="Cafe">
+                <h3>Cafe Aroma</h3>
+                <p>Enjoy the perfect brew and snacks.</p>
+                 <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="facility-card" data-category="cafes" data-rating="2">
+                <img src="wanderland.jpg" alt="Cafe">
+                <h3>Wanderlust Bistro</h3>
+                <p>A delicious adventure visit Wanderlust Bistro.</p>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="facility-card" data-category="cafes" data-rating="3">
+                <img src="cafe destinationjpg.jpg" alt="Cafe">
+                <h3>Cafe Destination</h3>
+                <p>Most popular amongst young crowd</p>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <div class="facility-card" data-category="cafes" data-rating="4">
+                <img src="buno.jpg" alt="Cafe">
+                <h3>Buon Cibo - The Italian Cafe</h3>
+                <p>Enjoy the perfect pizzas.</p>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="facility-card" data-category="cafes" data-rating="2">
+                <img src="leston.jpg" alt="Cafe">
+                <h3>Le Stone</h3>
+                <p>Enjoy the ultimate vibes .</p>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="facility-card" data-category="cafes" data-rating="3">
+                <img src="skyblue.jpg" alt="Cafe">
+                <h3>Sky-Blue</h3>
+                <p>Best restaurant banquet hall</p>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="facility-card" data-category="cafes" data-rating="5">
+                <img src="resort.jpg" alt="Cafe">
+                <h3>Sentosa Multi Cuisine Restaurant</h3>
+                <p>Best north indian food in Pune</p>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="facility-card" data-category="cafes" data-rating="5">
+                <img src="sapta.jpg" alt="Cafe">
+                <h3>Saptagiri Restaurant & Bar</h3>
+                <p>Experience the rich tapestry of India on your plate</p>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+
+            <!---- Accc-->
+            <div class="facility-card" data-category="accommodations" data-rating="4">
+                <img src="pg1.jpg" alt="Hotel">
+                <h3>Poona Royal Pg</h3>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="facility-card" data-category="accommodations" data-rating="4">
+                <img src="pg2.jpg" alt="Hotel">
+                <h3>Shree Ganesh PG/Hostel</h3>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="facility-card" data-category="accommodations" data-rating="4">
+                <img src="pg4.jpg" alt="Hotel">
+                <h3>Asha Hostel</h3>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="facility-card" data-category="accommodations" data-rating="4">
+                <img src="pg7.jpg" alt="Hotel">
+                <h3>ShivMala Girls PG</h3>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            
+            <!--- MEDL-->
+            <div class="facility-card" data-category="medical" data-rating="5">
+                <img src="med1.jpg" alt="Pharmacy">
+                <h3>Shree medical and general stores</h3>
+                <p>Get all your medical essentials here.</p>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+
+            <div class="facility-card" data-category="medical" data-rating="5">
+                <img src="med.jpg" alt="Pharmacy">
+                <h3>Wellness Forever Pharmacy</h3>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <div class="facility-card" data-category="medical" data-rating="5">
+                <img src="med2.jpg" alt="Pharmacy">
+                <h3>Sagar chemist and Medical store</h3>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <div class="facility-card" data-category="medical" data-rating="5">
+                <img src="med3.jpg" alt="Pharmacy">
+                <h3>Panortho's Gayatree Medical Store</h3>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="facility-card" data-category="medical" data-rating="5">
+                <img src="med4.jpg" alt="Pharmacy">
+                <h3>Lokmanya hospital Nigdi</h3>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="facility-card" data-category="medical" data-rating="5">
+                <img src="med5.jpg" alt="Pharmacy">
+                <h3>Dhanwantari Hospital Nigdi</h3>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <!--- parks-->
+            <div class="facility-card" data-category="attractions" data-rating="5">
+                <img src="p1jpg.jpg" alt="Park">
+                <h3>Savarkar Garden & Jogging Track</h3>
+                <p>Enjoy a peaceful walk in the heart of the city.</p>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="facility-card" data-category="attractions" data-rating="4">
+                <img src="pa2.jpg" alt="Park">
+                <h3>GPRA Park</h3>
+                <p>Enjoy a peaceful walk in the heart of the city.</p>
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+            <br>
+            <div class="facility-card" data-category="attractions" data-rating="3">
+                <img src="pa3.jpg" alt="Park">
+                <h3>Shree Gajanan Maharaj Udyan</h3>
+                <p>Enjoy a peaceful walk in the heart of the city.</p>
+            
+                <div class="feedback-section">
+                    <h4>Feedback</h4>
+                    <ul class="feedback-list">
+                        <!-- Feedback items will be dynamically added here -->
+                    </ul>
+                    <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+                    <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Start Your Journey with LocalPal</h2>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
