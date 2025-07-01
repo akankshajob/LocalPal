@@ -38,7 +38,7 @@ LocalPal is a community-driven platform designed to help newcomers and residents
 
 1. Clone the repo
 
-   git clone https://github.com/yourusername/localpal.git
+   git clone https://github.com/akankshajob/localpal.git
    cd localpal
 
 2. Install dependencies
