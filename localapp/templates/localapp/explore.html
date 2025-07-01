@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore - LocalPal</title>
+  <script src="{% static 'localapp/explore.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'localapp/stylesss.css' %}">
+</head>
+<body>
+  <!-- Navbar -->
+ <nav class="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+      <span>LocalPal</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'explore' %}">Explore</a></li>
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+      {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+  <!-- Header -->
+  <header class="explore-header">
+    <h1>Explore Local Gems</h1>
+    <p><b>Discover and experience the best your city has to offer!</b></p>
+  </header>
+
+  <!-- Filters -->
+  <section class="filter-section">
+    <div class="container">
+      <input type="text" id="search-bar" placeholder="Search by name or keyword..." oninput="filterFacilities()">
+      <select id="category-filter" onchange="filterFacilities()">
+        <option value="all">All Categories</option>
+        <option value="cafes">Cafes & Restaurants</option>
+        <option value="accommodations">Accommodations</option>
+        <option value="medical">Medical Services</option>
+        <option value="attractions">Local Attractions</option>
+      </select>
+      <select id="rating-filter" onchange="filterFacilities()">
+        <option value="all">All Ratings</option>
+        <option value="5">5 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="3">3 Stars</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Facilities -->
+  <section class="facilities-grid">
+    <!-- CAFES -->
+    <div class="facility-card" data-category="cafes" data-rating="3">
+      <img src="{% static 'localapp/Cafe aroma.jpg' %}" alt="Cafe">
+      <h3>Cafe Aroma</h3>
+      <p>Enjoy the perfect brew and snacks.</p>
+      <div class="feedback-section">
+        <h4>Feedback</h4>
+        <ul class="feedback-list"></ul>
+        <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+        <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+      </div>
+    </div>
+    <div class="facility-card" data-category="cafes" data-rating="2">
+      <img src="{% static 'localapp/wanderland.jpg' %}" alt="Cafe">
+      <h3>Wanderlust Bistro</h3>
+      <p>A delicious adventure visit Wanderlust Bistro.</p>
+      <div class="feedback-section">
+        <h4>Feedback</h4>
+        <ul class="feedback-list"></ul>
+        <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+        <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+      </div>
+    </div>
+    <div class="facility-card" data-category="cafes" data-rating="3">
+      <img src="{% static 'localapp/cafe destinationjpg.jpg' %}" alt="Cafe">
+      <h3>Cafe Destination</h3>
+      <p>Most popular amongst young crowd</p>
+      <div class="feedback-section">
+        <h4>Feedback</h4>
+        <ul class="feedback-list"></ul>
+        <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+        <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+      </div>
+    </div>
+    <div class="facility-card" data-category="cafes" data-rating="4">
+      <img src="{% static 'localapp/buno.jpg' %}" alt="Cafe">
+      <h3>Buon Cibo - The Italian Cafe</h3>
+      <p>Enjoy the perfect pizzas.</p>
+      <div class="feedback-section">
+        <h4>Feedback</h4>
+        <ul class="feedback-list"></ul>
+        <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+        <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+      </div>
+    </div>
+    <div class="facility-card" data-category="cafes" data-rating="2">
+      <img src="{% static 'localapp/leston.jpg' %}" alt="Cafe">
+      <h3>Le Stone</h3>
+      <p>Enjoy the ultimate vibes.</p>
+      <div class="feedback-section">
+        <h4>Feedback</h4>
+        <ul class="feedback-list"></ul>
+        <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+        <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+      </div>
+    </div>
+    <div class="facility-card" data-category="cafes" data-rating="3">
+      <img src="{% static 'localapp/skyblue.jpg' %}" alt="Cafe">
+      <h3>Sky-Blue</h3>
+      <p>Best restaurant banquet hall</p>
+      <div class="feedback-section">
+        <h4>Feedback</h4>
+        <ul class="feedback-list"></ul>
+        <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+        <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+      </div>
+    </div>
+    <div class="facility-card" data-category="cafes" data-rating="5">
+      <img src="{% static 'localapp/resort.jpg' %}" alt="Cafe">
+      <h3>Sentosa Multi Cuisine Restaurant</h3>
+      <p>Best north Indian food in Pune</p>
+      <div class="feedback-section">
+        <h4>Feedback</h4>
+        <ul class="feedback-list"></ul>
+        <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+        <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+      </div>
+    </div>
+    <div class="facility-card" data-category="cafes" data-rating="5">
+      <img src="{% static 'localapp/sapta.jpg' %}" alt="Cafe">
+      <h3>Saptagiri Restaurant & Bar</h3>
+      <p>Experience the rich tapestry of India on your plate</p>
+      <div class="feedback-section">
+        <h4>Feedback</h4>
+        <ul class="feedback-list"></ul>
+        <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+        <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+      </div>
+    </div>
+    <!-- ACCOMMODATIONS -->
+    <div class="facility-card" data-category="accommodations" data-rating="4">
+      <img src="{% static 'localapp/pg1.jpg' %}" alt="Hotel">
+      <h3>Poona Royal Pg</h3>
+      <div class="feedback-section">
+        <h4>Feedback</h4>
+        <ul class="feedback-list"></ul>
+        <textarea placeholder="Leave your feedback..." class="feedback-input"></textarea>
+        <button onclick="addFeedback(this)" class="feedback-btn">Submit</button>
+      </div>
+    </div>
+    <!-- add remaining accommodations / medical / parks the exact same way
+         following {% static 'localapp/<image name>' %} -->
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Start Your Journey with LocalPal</h2>
+    </div>
+  </sec>
