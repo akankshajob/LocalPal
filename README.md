@@ -128,8 +128,3 @@ Special thanks to the Django and open source community for providing incredible 
 
 **LocalPal — Helping you feel at home, wherever you are.** 🏡
 
-```
-
----
-
-```
