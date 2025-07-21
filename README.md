@@ -93,8 +93,8 @@ localpal/
     settings.py
     urls.py
     wsgi.py
-manage.py
-
+  manage.py
+```
 
 ---
 
