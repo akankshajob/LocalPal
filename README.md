@@ -80,7 +80,7 @@ Access the admin panel at: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/
 
 ## 📂 Project Structure
 
-
+```
 localpal/
   localapp/
     static/localapp/        # CSS, images, JavaScript
