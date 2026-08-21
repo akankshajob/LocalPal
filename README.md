@@ -114,12 +114,6 @@ Pull requests are welcome! If you spot a bug or want to propose a feature, feel 
 
 ---
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
 ## 🙏 Acknowledgements
 
 Special thanks to the Django and open source community for providing incredible tools to build modern web applications.
